@@ -1,6 +1,3 @@
-
-## Please switch to [DragView](https://github.com/tuanhav95/DragView), for the best support, thank you
-
 # DraggablePanel
 
 ![Alt text](output/ezgif.com-video-to-gif.gif) | ![Alt text](output/Screenshot_20190417-173713.png)  | ![Alt text](output/Screenshot_20190417-173738.png) 
@@ -20,7 +17,7 @@
     
     
     	dependencies {
-	        implementation 'com.github.hoanganhtuan95ptit:DraggablePanel:1.2.5'
+	        implementation 'com.github.damaisubimawanto:DraggablePanelWithExoplayer:1.2.6'
 	}
 ```
 
