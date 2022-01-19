@@ -42,7 +42,7 @@ class TopFragment: Fragment() {
             .setBandwidthMeter(bandwidthMeter)
             .build()
 
-        val uri = Uri.parse("https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4")
+        val uri = Uri.parse("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
         val mediaItem = MediaItem.Builder().setUri(uri).build()
         player.setMediaItem(mediaItem)
         player.prepare()

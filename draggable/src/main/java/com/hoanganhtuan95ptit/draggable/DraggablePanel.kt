@@ -4,16 +4,16 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Rect
 import android.util.AttributeSet
-import android.util.Log
 import android.view.*
+import android.widget.FrameLayout
 import android.widget.RelativeLayout
+import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
 import com.hoanganhtuan95ptit.draggable.utils.*
 import com.hoanganhtuan95ptit.draggable.widget.DragBehavior
 import com.hoanganhtuan95ptit.draggable.widget.DragFrame
-import kotlinx.android.synthetic.main.layout_draggable_panel.view.*
 import kotlin.math.abs
 
 open class DraggablePanel @JvmOverloads constructor(
@@ -78,11 +78,21 @@ open class DraggablePanel @JvmOverloads constructor(
 
     var mDraggableListener: DraggableListener? = null
 
+    private var frameDrag:DragFrame
+    private var frameFirst:FrameLayout
+    private var frameSecond:FrameLayout
+    private var appbarLayout:AppBarLayout
+    private var toolbar: Toolbar
     init {
 
         visibility = View.INVISIBLE
 
         inflate(context, R.layout.layout_draggable_panel, this)
+        frameDrag = findViewById(R.id.frameDrag)
+        frameFirst = findViewById(R.id.frameFirst)
+        frameSecond = findViewById(R.id.frameSecond)
+        appbarLayout = findViewById(R.id.appbarLayout)
+        toolbar = findViewById(R.id.toolbar)
 
         if (attrs != null) {
             val typedArray = context.obtainStyledAttributes(attrs, R.styleable.DraggablePanel)
